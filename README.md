@@ -8,6 +8,8 @@ Implementation of the random perks dbd devs refuse to give us!
 - Before running the script, make sure you are on the perk selection page of the game.
 - When you run the script, you have 5 seconds to click on the game window before the script starts picking random perks.
 - The script will pick 4 random perks for you.
+- This is the first version of the script, so it is not perfect.
+- i tested on survivor only, 9 pages of perks. killer 🤷‍♂️
 
 ### activate your environment
 ```pip -m venv venv```
