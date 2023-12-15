@@ -39,10 +39,10 @@ all_perks = [
 ]
 
 
-def pick_random_perks(num_perks_to_pick):
+def pick_random_perks():
     selected_perks = set()
 
-    while len(selected_perks) < num_perks_to_pick:
+    while len(selected_perks) < 4:
         # Choose a random page
         random_page = random.choice(all_perks)
 
@@ -55,11 +55,8 @@ def pick_random_perks(num_perks_to_pick):
     return list(selected_perks)
 
 
-# Number of perks to pick
-num_perks_to_pick = 4
-
 # Get the randomly selected perks
-selected_perks = pick_random_perks(num_perks_to_pick)
+selected_perks = pick_random_perks()
 
 # Display the result
-print("Randomly Selected Perks:", selected_perks)
+print(selected_perks)
