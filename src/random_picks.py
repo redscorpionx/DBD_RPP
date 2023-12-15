@@ -4,48 +4,66 @@ import time
 
 import pyautogui
 
-# Load config from config.json
-with open("config.json", "r") as config_file:
-    config = json.load(config_file)
+
+def move_mouse(x, y):
+    pyautogui.moveTo(x, y)
+    time.sleep(1)  # Add a delay to ensure actions are registered
 
 
-# Function to click on a given coordinate
-def click_coordinate(x, y):
+def click_coordinates(x, y):
     pyautogui.click(x, y)
-    time.sleep(1)  # Wait for the action to complete
+    time.sleep(1)  # Add a delay to ensure actions are registered
 
 
-# Function to select a random perk from a given row
-def select_random_perk(row):
-    perk_list = list(config["perkCoordinates"][row].keys())
-    random_perk = random.choice(perk_list)
-    return config["perkCoordinates"][row][random_perk]
+def double_click_coordinates(x, y):
+    pyautogui.doubleClick(x, y, 1)
+    time.sleep(1)  # Add a delay to ensure actions are registered
 
 
-# Function to select a random page
-def select_random_page():
-    page_list = list(config["pages_coordinates"].keys())
-    random_page = random.choice(page_list)
-    return config["pages_coordinates"][random_page]
+def main():
+    with open("src/config.json") as config_file:
+        config = json.load(config_file)
+
+    perk_slots_coordinates = config["perkSlotsCoordinates"]
+    perk_coordinates = config["perkCoordinates"]
+    pages_coordinates = config["pages_coordinates"]
+
+    for slot, slot_coordinates in perk_slots_coordinates.items():
+        print(f"Processing {slot}...")
+
+        # Double-click on page_5 coordinate
+        move_mouse(pages_coordinates["page_5"]["x"], pages_coordinates["page_5"]["y"])
+
+        double_click_coordinates(
+            pages_coordinates["page_5"]["x"], pages_coordinates["page_5"]["y"]
+        )
+
+        # Click on the specified slot coordinates
+        move_mouse(slot_coordinates["x"], slot_coordinates["y"])
+
+        click_coordinates(slot_coordinates["x"], slot_coordinates["y"])
+        print(f"Selected slot: {slot} at {slot_coordinates}")
+
+        # Click on a randomly chosen page
+        random_page = random.choice(list(pages_coordinates.values()))
+        move_mouse(random_page["x"], random_page["y"])
+
+        pyautogui.click(random_page["x"], random_page["y"], 2, 1)
+        print(f"Selected random page: {random_page}")
+
+        # Select a random row
+        random_row = random.choice(list(perk_coordinates.values()))
+        print(f"Selected random row: {random_row}")
+
+        # Click on a randomly chosen perk within the selected row
+        random_perk = random.choice(list(random_row.values()))
+        move_mouse(random_perk["x"], random_perk["y"])
+
+        click_coordinates(random_perk["x"], random_perk["y"])
+        print(f"Selected random perk: {random_perk}")
+
+    print("Script completed successfully.")
 
 
-# Function to select perks for all four slots
-def select_perks():
-    for i in range(1, 5):
-        # Select perk slot
-        slot = f"slot_{i}"
-        slot_coordinates = config["perkSlotsCoordinates"][slot]
-        click_coordinate(slot_coordinates["x"], slot_coordinates["y"])
-
-        # Select random page
-        page_coordinates = select_random_page()
-        click_coordinate(page_coordinates["x"], page_coordinates["y"])
-
-        # Select random perk from each row
-        for row in config["perkCoordinates"]:
-            perk_coordinates = select_random_perk(row)
-            click_coordinate(perk_coordinates["x"], perk_coordinates["y"])
-
-
-# Run the script
-select_perks()
+if __name__ == "__main__":
+    main()
