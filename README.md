@@ -12,7 +12,7 @@ Implementation of the random perks dbd devs refuse to give us!
 - i tested on survivor only, 9 pages of perks. killer 🤷‍♂️
 
 ### activate your environment
-```pip -m venv venv```
+```python -m venv venv```
 
 ```source venv/bin/activate```
 
