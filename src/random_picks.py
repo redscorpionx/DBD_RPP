@@ -60,3 +60,15 @@ selected_perks = pick_random_perks()
 
 # Display the result
 print(selected_perks)
+
+# pages one to nine coordinates and the center page
+center_five = (665, 930)
+one = (495, 930)
+two = (540, 930)
+three = (581, 930)
+four = (622, 930)
+five = (665, 930)
+six = (705, 930)
+seven = (746, 930)
+eight = (790, 930)
+nine = (832, 930)
