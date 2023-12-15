@@ -1,14 +1,8 @@
 import random
 
-
-# 435 height
-# 168
-
-
-def load_perks():
-    # Assuming you have a list of perks or a database of perks
-    # Load perks from your source (file, database, etc.)
-    perks = [
+# Assuming perks are stored in a list, where each page is a sublist
+all_perks = [
+    [
         "Perk1",
         "Perk2",
         "Perk3",
@@ -24,34 +18,45 @@ def load_perks():
         "Perk13",
         "Perk14",
         "Perk15",
+    ],
+    [
         "Perk16",
         "Perk17",
         "Perk18",
         "Perk19",
         "Perk20",
-        # Add more perks as needed
-    ]
-    return perks
+        "Perk21",
+        "Perk22",
+        "Perk23",
+        "Perk24",
+        "Perk25",
+        "Perk26",
+        "Perk27",
+        "Perk28",
+        "Perk29",
+        "Perk30",
+    ],
+]
 
 
-def randomly_select_perks(perks, num_perks=4):
-    # Shuffle the list of perks
-    random.shuffle(perks)
+def pick_random_perks():
+    selected_perks = set()
 
-    # Select the first 4 perks from the shuffled list
-    selected_perks = perks[:num_perks]
+    while len(selected_perks) < 4:
+        # Choose a random page
+        random_page = random.choice(all_perks)
 
-    return selected_perks
+        # Choose a random perk from the selected page
+        random_perk = random.choice(random_page)
+
+        # Add the perk to the set of selected perks
+        selected_perks.add(random_perk)
+
+    return list(selected_perks)
 
 
-def display_perks(selected_perks):
-    # Display the selected perks
-    print("Selected Perks:")
-    for i, perk in enumerate(selected_perks, 1):
-        print(f"{i}. {perk}")
+# Get the randomly selected perks
+selected_perks = pick_random_perks()
 
-
-def main():
-    perks = load_perks()
-    selected_perks = randomly_select_perks(perks)
-    display_perks
+# Display the result
+print(selected_perks)
