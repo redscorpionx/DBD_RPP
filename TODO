@@ -1,0 +1,8 @@
+TODO:
++ Impelement a gui interface for user-friendliness.
++ Impelement an overlay to hide perks picked till game starts.
++ Impelement perk exception selection so players can choose which perks to exclude from the random selection.
+
+FIXME:
++ Fix the perk selection so it doesn't pick the same perk twice no matter what.
++ Efficiency/Speed/Maintainability improvements.
