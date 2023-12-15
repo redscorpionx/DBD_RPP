@@ -1,127 +1,124 @@
 {
-    // The 4 perk slots the player load perks into.
     "perkSlotsCoordinates": {
-        "slot_one": {
+        "slot_1": {
             "x": 495,
             "y": 930
         },
-        "slot_two": {
+        "slot_2": {
             "x": 540,
             "y": 930
         },
-        "slot_three": {
+        "slot_3": {
             "x": 581,
             "y": 930
         },
-        "slot_four": {
+        "slot_4": {
             "x": 622,
             "y": 930
         }
     },
-    // The 15 perks shown on each page, grouped into the 3 rows that contain 5 perks each. 
     "perkCoordinates": {
         "row_1": {
-            "perk_one": {
+            "perk_1": {
                 "x": 392,
                 "y": 630
             },
-            "perk_two": {
+            "perk_2": {
                 "x": 515,
                 "y": 630
             },
-            "perk_three": {
+            "perk_3": {
                 "x": 643,
                 "y": 630
             },
-            "perk_four": {
+            "perk_4": {
                 "x": 764,
                 "y": 630
             },
-            "perk_five": {
+            "perk_5": {
                 "x": 885,
                 "y": 630
             }
         },
         "row_2": {
-            "perk_six": {
+            "perk_6": {
                 "x": 460,
                 "y": 722
             },
-            "perk_seven": {
+            "perk_7": {
                 "x": 581,
                 "y": 722
             },
-            "perk_eight": {
+            "perk_8": {
                 "x": 711,
                 "y": 722
             },
-            "perk_nine": {
+            "perk_9": {
                 "x": 826,
                 "y": 722
             },
-            "perk_ten": {
+            "perk_10": {
                 "x": 958,
                 "y": 722
             }
         },
         "row_3": {
-            "perk_eleven": {
+            "perk_11": {
                 "x": 395,
                 "y": 814
             },
-            "perk_twelve": {
+            "perk_12": {
                 "x": 517,
                 "y": 814
             },
-            "perk_thirteen": {
+            "perk_13": {
                 "x": 645,
                 "y": 814
             },
-            "perk_fourteen": {
+            "perk_14": {
                 "x": 771,
                 "y": 814
             },
-            "perk_fifteen": {
+            "perk_15": {
                 "x": 887,
                 "y": 814
             }
         }
     },
-    // The 9 pages of perks that the player can browse to select the perks.
     "pages_coordinates": {
-        "one": {
+        "page_1": {
             "x": 495,
             "y": 930
         },
-        "two": {
+        "page_2": {
             "x": 540,
             "y": 930
         },
-        "three": {
+        "page_3": {
             "x": 581,
             "y": 930
         },
-        "four": {
+        "page_4": {
             "x": 622,
             "y": 930
         },
-        "five": {
+        "page_5": {
             "x": 665,
             "y": 930
         },
-        "six": {
+        "page_6": {
             "x": 705,
             "y": 930
         },
-        "seven": {
+        "page_7": {
             "x": 746,
             "y": 930
         },
-        "eight": {
+        "page_8": {
             "x": 790,
             "y": 930
         },
-        "nine": {
+        "page_9": {
             "x": 832,
             "y": 930
         }
