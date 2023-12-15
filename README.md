@@ -2,6 +2,13 @@
 
 Implementation of the random perks dbd devs refuse to give us!
 
+## TODO:
+- Impelement a gui interface for user-friendliness.
+- Impelement an overlay to hide perks picked till game starts.
+- Impelement perk exception selection so players can choose which perks to exclude from the random selection.
+- Impelement a killer version of the script.
+- Impelement a version of the script that works on all resolutions.
+
 ## Usage
 
 - This only works on a 1920x1080 resolution.
