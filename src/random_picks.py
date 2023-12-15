@@ -72,3 +72,9 @@ six = (705, 930)
 seven = (746, 930)
 eight = (790, 930)
 nine = (832, 930)
+
+# Perk slots coordinates
+perk_slot_one = (495, 930)
+perk_slot_two = (540, 930)
+perk_slot_three = (581, 930)
+perk_slot_four = (622, 930)
